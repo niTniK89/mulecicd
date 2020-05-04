@@ -9,6 +9,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="mulemavplugFlow" doc:id="91cfc68b-b7f2-43d8-b808-9e1bafde7cd9" >
 		<http:listener doc:name="Listener" doc:id="9530f44b-c857-4daf-955e-58fbc14ded25" config-ref="HTTP_Listener_config" path="test"/>
-		<set-payload value="#['This is Mule 4 for Git hub and deployment using Maven Plugin']" doc:name="Set Payload" doc:id="6dbb3d2a-679f-442b-9479-1f65e8bfb6b0" />
+		<set-payload value="#['This is Mule 4 for Git hub and deployment using Jenkins']" doc:name="Set Payload" doc:id="6dbb3d2a-679f-442b-9479-1f65e8bfb6b0" />
 	</flow>
 </mule>
