@@ -9,7 +9,12 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="mulemavplugFlow" doc:id="91cfc68b-b7f2-43d8-b808-9e1bafde7cd9" >
 		<http:listener doc:name="Listener" doc:id="9530f44b-c857-4daf-955e-58fbc14ded25" config-ref="HTTP_Listener_config" path="test"/>
-		<set-payload value="#['This is Mule 4 deployment using Maven, Git-hub, Jenkins &amp; Node JS.']" doc:name="Set Payload" doc:id="6dbb3d2a-679f-442b-9479-1f65e8bfb6b0" />
+		<set-payload value="#['This is Mule 4 deployment using Maven, Git-hub, Jenkins &amp; Node JS in flow 1. ']" doc:name="Set Payload" doc:id="6dbb3d2a-679f-442b-9479-1f65e8bfb6b0" />
 		<logger level="INFO" doc:name="Logger" doc:id="3607041e-1ae8-4ef5-910d-970ad6132ab8" message="#[payload]"/>
+	</flow>
+	<flow name="mulemavplugFlow1" doc:id="e967dc14-f827-4ede-9be2-6d51899ddf52" >
+		<http:listener doc:name="Listener" doc:id="8ef5f0d1-840a-40a5-816c-786e6802e665" config-ref="HTTP_Listener_config" path="run"/>
+		<set-payload value="#['This is Mule 4 deployment using Maven, Git-hub, Jenkins &amp; Node JS in flow 2.']" doc:name="Set Payload" doc:id="1822a44b-7c18-434e-bb16-86288e753007" />
+		<logger level="INFO" doc:name="Logger" doc:id="5ba2257c-755f-41ca-b0ea-13f09fe32f2c" message="#[payload]"/>
 	</flow>
 </mule>
