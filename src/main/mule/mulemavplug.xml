@@ -17,4 +17,9 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 		<set-payload value="#['This is Mule 4 deployment using Maven, Git-hub, Jenkins &amp; Node JS in flow 2.']" doc:name="Set Payload" doc:id="1822a44b-7c18-434e-bb16-86288e753007" />
 		<logger level="INFO" doc:name="Logger" doc:id="5ba2257c-755f-41ca-b0ea-13f09fe32f2c" message="#[payload]"/>
 	</flow>
+	<flow name="mulemavplugFlow2" doc:id="318c618e-6b32-4f42-9c7b-6aaed0231ef3" >
+		<http:listener doc:name="Listener" doc:id="cfd7dcd8-6c11-48e7-af5c-773f1abbe29c" config-ref="HTTP_Listener_config" path="test1"/>
+		<set-payload value="#['This is Mule 4 deployment using Maven, Git-hub, Jenkins &amp; Node JS in flow 3.']" doc:name="Set Payload" doc:id="d3005d43-39c0-4b30-9d0a-826d319ce482" />
+		<logger level="INFO" doc:name="Logger" doc:id="816de727-90b2-4817-ad98-e428ae1a3a59" message="#[payload]"/>
+	</flow>
 </mule>
