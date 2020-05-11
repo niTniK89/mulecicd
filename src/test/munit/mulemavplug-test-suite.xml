@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="mulemavplug-test-suite.xml" />
+	<munit:test name="mulemavplug-test-suite-mulemavplugFlowTest" doc:id="873859b3-a1f9-40c8-b413-f2422f37d52c" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to mulemavplugFlow" doc:id="3fe99d91-49c8-43a8-bb30-68b40f99e987" name="mulemavplugFlow"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="99a4a592-6a1f-46ef-9db7-2dba194cb347" message="Payload is null" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="mulemavplug-test-suite-mulemavplugFlow3Test" doc:id="9e910b5f-fc0e-4dcb-b2a7-754c8e5c9ad5" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to mulemavplugFlow3" doc:id="9348fe61-ab77-49eb-b47b-17f2e7d68b57" name="mulemavplugFlow3"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="1d172c6b-ea2d-4a4e-9b0a-fcfe2d833994" message="Payload is null" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="mulemavplug-test-suite-mulemavplugFlow1Test" doc:id="b1f26c73-01c3-4254-a86e-b3809069bec7" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to mulemavplugFlow1" doc:id="6a58caeb-1163-490d-8316-c7e95b6f9641" name="mulemavplugFlow1"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="67d9b767-16a6-4a23-b6d0-b90e4dd51d9b" message="Payload is null" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="mulemavplug-test-suite-mulemavplugFlow2Test" doc:id="dfacd87f-00c8-4b81-ba45-32c594dd3dbf" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to mulemavplugFlow2" doc:id="1a71d2df-195d-4dd0-aa1c-7b6ae95b201b" name="mulemavplugFlow2"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="34975860-16b3-4aab-83db-bef37a7aa310" message="Payload is null" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+		</munit:validation>
+	</munit:test>
+
+
+</mule>
