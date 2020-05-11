@@ -8,11 +8,6 @@ pipeline
 		}
 		}
 		
-		stage('MUnit Testing'){
-		steps{
-		bat 'mvn test'
-		}
-		}
 		
 		stage('Deploy Application to CloudHub'){
 		steps{
