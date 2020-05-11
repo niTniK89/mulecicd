@@ -8,7 +8,7 @@ pipeline
 		}
 		}
 		
-		stage('MUnit Testing Application'){
+		stage('MUnit Testing'){
 		steps{
 		bat 'mvn test'
 		}
